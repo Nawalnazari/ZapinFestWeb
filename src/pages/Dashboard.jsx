@@ -1,34 +1,45 @@
-import React, { useState } from "react";
+import React, { use, useState, useEffect } from "react";
 
 import Sidebar from "../partials/Sidebar";
 import Header from "../partials/Header";
 import Banner from "../partials/Banner";
 import ScoreboardCard from "../components/ScoreboardCard";
 import ResultCard from "../components/ResultCard";
+import { useLocation } from "react-router-dom";
+import {
+  bolaJaringMatchResults,
+  bolaJaringTeams,
+  futsalMatchResults,
+  futsalTeams,
+  takrawMatchResults,
+  takrawTeams,
+} from "../mockData/scoreboardData";
 
 function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [tableName, setTableName] = useState("Futsal");
+  const [teams, setTeams] = useState([]);
+  const [matchResults, setMatchResults] = useState([]);
+  const location = useLocation();
+  const { flagMenu } = location.state || {};
 
-  // Scoreboard mock data
-  const futsalTeams = [
-    { name: "Thunder FC", points: 15 },
-    { name: "Lightning United", points: 12 },
-    { name: "Red Dragons", points: 10 },
-    { name: "Blue Sharks", points: 8 },
-    { name: "Green Eagles", points: 6 },
-  ];
+  console.log("Flag Menu:", flagMenu); // Debugging line to check the flagMenu value
 
-  // Mock match results
-  const matchResults = [
-    { home: "Thunder FC", homeScore: 1, away: "Red Dragons", awayScore: 0 },
-    {
-      home: "Lightning United",
-      homeScore: 2,
-      away: "Blue Sharks",
-      awayScore: 2,
-    },
-    { home: "Green Eagles", homeScore: 0, away: "Thunder FC", awayScore: 3 },
-  ];
+  useEffect(() => {
+    if (flagMenu === "takraw") {
+      setTableName("Takraw");
+      setTeams(takrawTeams);
+      setMatchResults(takrawMatchResults);
+    } else if (flagMenu === "bolaJaring") {
+      setTableName("Bola Jaring");
+      setTeams(bolaJaringTeams);
+      setMatchResults(bolaJaringMatchResults);
+    } else {
+      setTableName("Futsal");
+      setTeams(futsalTeams);
+      setMatchResults(futsalMatchResults);
+    }
+  }, [flagMenu]);
 
   return (
     <div className="flex h-screen overflow-hidden">
@@ -54,7 +65,7 @@ function Dashboard() {
 
             <div className="flex flex-row max-sm:flex-col gap-6">
               {/* Scoreboard Table */}
-              <ScoreboardCard tableName={"Futsal"} teams={futsalTeams} />
+              <ScoreboardCard tableName={tableName} teams={teams} />
               {/* End Scoreboard Table */}
 
               {/* Result Card */}
@@ -63,7 +74,6 @@ function Dashboard() {
             </div>
           </div>
         </main>
-
         <Banner />
       </div>
     </div>
