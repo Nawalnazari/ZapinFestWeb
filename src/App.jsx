@@ -8,6 +8,7 @@ import "./charts/ChartjsConfig";
 // Import pages
 import Dashboard from "./pages/Dashboard";
 import Analytics from "./pages/Analytics";
+import SiaranLangsung from "./pages/SiaranLangsung";
 
 function App() {
   const location = useLocation();
@@ -23,6 +24,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Dashboard />} />
         <Route path="/analytics" element={<Analytics />} />
+        <Route path="/siaranLangsung" element={<SiaranLangsung />} />
+
         {/* Add more routes as needed */}
         {/* Example: <Route path="/analytics" element={<Analytics />} /> */}
       </Routes>
