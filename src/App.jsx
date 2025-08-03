@@ -10,6 +10,8 @@ import Dashboard from "./pages/Dashboard";
 import Analytics from "./pages/Analytics";
 import SiaranLangsung from "./pages/SiaranLangsung";
 import Info from "./pages/Info";
+import Jadual from "./pages/Jadual";
+import Hubungi from "./pages/Hubungi";
 
 function App() {
   const location = useLocation();
@@ -23,10 +25,12 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/info" element={<Info />} />
-        <Route exact path="/" element={<Dashboard />} />
+        <Route path="/" element={<Info />} />
+        <Route exact path="/dashboard" element={<Dashboard />} />
         <Route path="/analytics" element={<Analytics />} />
+        <Route path="/jadual" element={<Jadual />} />
         <Route path="/siaranLangsung" element={<SiaranLangsung />} />
+        <Route path="/hubungi" element={<Hubungi />} />
 
         {/* Add more routes as needed */}
         {/* Example: <Route path="/analytics" element={<Analytics />} /> */}
