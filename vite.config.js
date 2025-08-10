@@ -7,7 +7,6 @@ export default defineConfig({
     "process.env": process.env
   },
   plugins: [react()],
-  base: "/ZapinFestWeb/",
   build: {
     commonjsOptions: {
       transformMixedEsModules: true
