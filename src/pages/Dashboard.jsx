@@ -25,19 +25,20 @@ function Dashboard() {
   const [matchResults] = useState(zapinMatchResults);
 
   return (
-    <div className="flex h-screen overflow-hidden bg-gradient-to-br from-violet-100 via-white to-violet-300 dark:from-gray-900 dark:via-gray-800 dark:to-violet-900">
+    <div className="flex flex-col h-screen bg-gradient-to-br from-violet-100 via-white to-violet-300 dark:from-gray-900 dark:via-gray-800 dark:to-violet-900">
       {/* Sidebar hanya untuk mobile */}
       {!window.matchMedia("(min-width: 768px)").matches && (
         <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
       )}
-      <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
-        {/* Menu utama di atas untuk desktop/tablet */}
-        <MainMenu />
-        {/* Header hanya untuk mobile */}
-        <div className="md:hidden">
-          <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-        </div>
-        <main className="grow flex flex-col items-center justify-center min-h-[80vh]">
+      {/* Menu utama di atas untuk desktop/tablet */}
+      <MainMenu />
+      {/* Header hanya untuk mobile */}
+      <div className="md:hidden">
+        <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+      </div>
+      {/* Jadikan content scrollable */}
+      <div className="flex-1 overflow-y-auto overflow-x-hidden">
+        <main className="flex flex-col items-center justify-start min-h-[80vh] py-8">
           <div className="w-full max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-extrabold mb-6 text-violet-700 dark:text-violet-300 drop-shadow-lg">
               Scoreboard Peserta Zapin
@@ -98,6 +99,7 @@ function Dashboard() {
           </div>
         </main>
       </div>
+      <SponsorBar />
     </div>
   );
 }
