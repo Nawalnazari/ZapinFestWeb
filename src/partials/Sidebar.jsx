@@ -93,14 +93,17 @@ function Sidebar({ sidebarOpen, setSidebarOpen, variant = "default" }) {
           </button>
           {/* Logo */}
           <NavLink end to="/" className="block">
-            <img
+            {/* <img
               src="/src/images/logoZapin.png"
               // /Users/nawalnazari/Documents/ZapinFestWeb/src/images/logoZapin.png
               alt="logoZapin"
               width={100}
               height={100}
               className="mx-auto"
-            />
+            /> */}
+            <span className="text-xl font-bold text-violet-600 dark:text-violet-400 mx-auto">
+              Zapin Festival 2026
+            </span>
           </NavLink>
         </div>
 
