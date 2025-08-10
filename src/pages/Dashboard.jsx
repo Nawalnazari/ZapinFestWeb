@@ -99,7 +99,6 @@ function Dashboard() {
           </div>
         </main>
       </div>
-      <SponsorBar />
     </div>
   );
 }
