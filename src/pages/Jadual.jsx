@@ -11,24 +11,24 @@ const zapinPerformanceSchedule = [
       {
         time: "11:00 pagi",
         group: "Zapin Johor",
-        stage: "Dewan Utama",
+        stage: "Dewan Utama"
       },
       {
         time: "12:00 tengah hari",
         group: "Zapin Selangor",
-        stage: "Dewan Utama",
+        stage: "Dewan Utama"
       },
       {
         time: "2:00 petang",
         group: "Zapin Melaka",
-        stage: "Dewan Utama",
+        stage: "Dewan Utama"
       },
       {
         time: "3:00 petang",
         group: "Zapin Perak",
-        stage: "Dewan Utama",
-      },
-    ],
+        stage: "Dewan Utama"
+      }
+    ]
   },
   {
     day: "Hari 2 (Ahad, 11 Ogos 2025)",
@@ -36,30 +36,30 @@ const zapinPerformanceSchedule = [
       {
         time: "10:00 pagi",
         group: "Zapin Pahang",
-        stage: "Dewan Utama",
+        stage: "Dewan Utama"
       },
       {
         time: "11:00 pagi",
         group: "Zapin Johor (Finalis)",
-        stage: "Dewan Utama",
+        stage: "Dewan Utama"
       },
       {
         time: "12:00 tengah hari",
         group: "Zapin Melaka (Finalis)",
-        stage: "Dewan Utama",
+        stage: "Dewan Utama"
       },
       {
         time: "1:00 petang",
         group: "Persembahan Muzik Tradisional",
-        stage: "Dewan Budaya",
+        stage: "Dewan Budaya"
       },
       {
         time: "2:00 petang",
         group: "Pengumuman pemenang & penyampaian hadiah",
-        stage: "Dewan Utama",
-      },
-    ],
-  },
+        stage: "Dewan Utama"
+      }
+    ]
+  }
 ];
 
 function Jadual() {
@@ -72,7 +72,7 @@ function Jadual() {
       {/* Content area */}
       <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
         {/*  Site header */}
-        <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+        {/* <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} /> */}
         <main className="grow">
           <div className="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-3xl mx-auto">
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
@@ -107,7 +107,7 @@ function Jadual() {
             </div>
           </div>
         </main>
-        <SponsorBar />
+        {/* <SponsorBar /> */}
       </div>
     </div>
   );

@@ -10,13 +10,13 @@ const zapinTeams = [
   { name: "Zapin Selangor", points: 78 },
   { name: "Zapin Melaka", points: 82 },
   { name: "Zapin Perak", points: 75 },
-  { name: "Zapin Pahang", points: 80 },
+  { name: "Zapin Pahang", points: 80 }
 ];
 
 const zapinMatchResults = [
   { home: "Zapin Johor", homeScore: 85, away: "Zapin Selangor", awayScore: 78 },
   { home: "Zapin Melaka", homeScore: 82, away: "Zapin Perak", awayScore: 75 },
-  { home: "Zapin Pahang", homeScore: 80, away: "Zapin Johor", awayScore: 85 },
+  { home: "Zapin Pahang", homeScore: 80, away: "Zapin Johor", awayScore: 85 }
 ];
 
 function Dashboard() {
@@ -32,7 +32,7 @@ function Dashboard() {
       {/* Content area */}
       <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
         {/*  Site header */}
-        <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+        {/* <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} /> */}
 
         <main className="grow">
           <div className="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-4xl mx-auto">

@@ -12,50 +12,50 @@ function SiaranLangsung() {
       time: "11:00 pagi",
       stage: "Dewan Utama",
       nowShowing: false,
-      link: "/livestream/zapin-johor",
+      link: "/livestream/zapin-johor"
     },
     {
       group: "Zapin Selangor",
       time: "12:00 tengah hari",
       stage: "Dewan Utama",
       nowShowing: false,
-      link: "/livestream/zapin-selangor",
+      link: "/livestream/zapin-selangor"
     },
     {
       group: "Zapin Melaka",
       time: "2:00 petang",
       stage: "Dewan Utama",
       nowShowing: true,
-      link: "/livestream/zapin-melaka",
+      link: "/livestream/zapin-melaka"
     },
     {
       group: "Zapin Perak",
       time: "3:00 petang",
       stage: "Dewan Utama",
       nowShowing: false,
-      link: "/livestream/zapin-perak",
+      link: "/livestream/zapin-perak"
     },
     {
       group: "Zapin Pahang",
       time: "10:00 pagi (Hari 2)",
       stage: "Dewan Utama",
       nowShowing: false,
-      link: "/livestream/zapin-pahang",
+      link: "/livestream/zapin-pahang"
     },
     {
       group: "Zapin Johor (Finalis)",
       time: "11:00 pagi (Hari 2)",
       stage: "Dewan Utama",
       nowShowing: false,
-      link: "/livestream/zapin-johor-final",
+      link: "/livestream/zapin-johor-final"
     },
     {
       group: "Zapin Melaka (Finalis)",
       time: "12:00 tengah hari (Hari 2)",
       stage: "Dewan Utama",
       nowShowing: false,
-      link: "/livestream/zapin-melaka-final",
-    },
+      link: "/livestream/zapin-melaka-final"
+    }
   ];
 
   return (
@@ -65,7 +65,7 @@ function SiaranLangsung() {
       {/* Content area */}
       <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
         {/*  Site header */}
-        <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+        {/* <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} /> */}
 
         <main className="grow">
           <div className="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-4xl mx-auto">
@@ -111,7 +111,7 @@ function SiaranLangsung() {
                             }`}
                             {...(!item.nowShowing && {
                               tabIndex: -1,
-                              "aria-disabled": true,
+                              "aria-disabled": true
                             })}
                           >
                             Tonton
