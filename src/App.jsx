@@ -12,6 +12,7 @@ import SiaranLangsung from "./pages/SiaranLangsung";
 import Info from "./pages/Info";
 import Jadual from "./pages/Jadual";
 import Hubungi from "./pages/Hubungi";
+import Main from "./pages/Main";
 
 function App() {
   const location = useLocation();
@@ -25,12 +26,14 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Info />} />
+        <Route path="/" element={<Main />} />
+        {/* <Route path="/" element={<Info />} /> */}
         <Route exact path="/dashboard" element={<Dashboard />} />
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/jadual" element={<Jadual />} />
         <Route path="/siaranLangsung" element={<SiaranLangsung />} />
         <Route path="/hubungi" element={<Hubungi />} />
+        {/* <Route path="/" element={<Info />} /> */}
 
         {/* Add more routes as needed */}
         {/* Example: <Route path="/analytics" element={<Analytics />} /> */}

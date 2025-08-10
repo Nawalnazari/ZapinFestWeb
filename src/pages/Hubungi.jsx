@@ -1,25 +1,32 @@
 import { useState } from "react";
 import Sidebar from "../partials/Sidebar";
 import Header from "../partials/Header";
+import SponsorBar from "../partials/SponsorBar";
+import MainMenu from "../partials/MainMenu";
 
 function Hubungi() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex h-screen overflow-hidden">
-      <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-
-      {/* Content area */}
-      <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
-        {/*  Site header */}
+    <div className="flex flex-col h-screen bg-gradient-to-br from-violet-100 via-white to-violet-300 dark:from-gray-900 dark:via-gray-800 dark:to-violet-900">
+      {/* Sidebar hanya untuk mobile */}
+      {!window.matchMedia("(min-width: 768px)").matches && (
+        <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+      )}
+      {/* Menu utama di atas untuk desktop/tablet */}
+      <MainMenu />
+      {/* Header hanya untuk mobile */}
+      <div className="md:hidden">
         <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-
-        <main className="grow">
-          <div className="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-2xl mx-auto">
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-              <h1 className="text-3xl font-bold mb-6 text-violet-700 dark:text-violet-300">
-                Hubungi & Info Jawatankuasa
-              </h1>
+      </div>
+      {/* Jadikan content scrollable */}
+      <div className="flex-1 overflow-y-auto overflow-x-hidden">
+        <main className="flex flex-col items-center justify-start min-h-[80vh] py-8">
+          <div className="w-full max-w-2xl mx-auto text-center">
+            <h1 className="text-4xl font-extrabold mb-6 text-violet-700 dark:text-violet-300 drop-shadow-lg">
+              Hubungi & Info Jawatankuasa
+            </h1>
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6 mb-8 text-left">
               <h2 className="text-xl font-semibold mb-2 text-violet-600 dark:text-violet-200">
                 Penganjur
               </h2>
