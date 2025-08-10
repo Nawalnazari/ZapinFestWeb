@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Sidebar from "../partials/Sidebar";
 import Header from "../partials/Header";
-import SponsorBar from "../partials/SponsorBar";
 
 // Jadual pertandingan Zapin (setiap kumpulan ada masa sendiri untuk persembahan)
 const zapinPerformanceSchedule = [
