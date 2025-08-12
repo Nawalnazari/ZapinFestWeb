@@ -123,15 +123,6 @@ function Jadual() {
                 </div>
               ))}
             </div>
-            <div className="flex flex-col items-center mt-8">
-              <span className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                Lokasi: Dewan Budaya, Kompleks Kebudayaan Negeri Johor, Johor
-                Bahru
-              </span>
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                Tarikh: 10 - 11 Ogos 2025
-              </span>
-            </div>
           </div>
         </main>
       </div>
