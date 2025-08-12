@@ -120,12 +120,12 @@ function Main() {
                   className="h-12"
                 />
                 <img
-                  src="/images/visitJohor.jpeg"
+                  src="/images/visitJohor.png"
                   alt="Visit Johor"
                   className="h-12"
                 />
                 <img
-                  src="/images/majuJohor.jpeg"
+                  src="/images/majuJohor.png"
                   alt="Maju Johor"
                   className="h-12"
                 />
