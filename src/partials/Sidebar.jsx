@@ -94,7 +94,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen, variant = "default" }) {
           {/* Logo */}
           <NavLink end to="/" className="block">
             <img
-              src="/src/images/logoZapin.png"
+              src="/images/logoZapin.png"
               // /Users/nawalnazari/Documents/ZapinFestWeb/src/images/logoZapin.png
               alt="logoZapin"
               width={100}
