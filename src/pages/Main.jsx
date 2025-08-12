@@ -6,9 +6,9 @@ import MainMenu from "../partials/MainMenu";
 
 // Contoh gambar untuk slideshow
 const images = [
-  "/src/images/zapin1.png",
-  "/src/images/zapin2.jpg",
-  "/src/images/zapin3.jpg"
+  "/images/zapin1.png",
+  "/images/zapin2.jpg",
+  "/images/zapin3.jpg"
 ];
 
 function Main() {
@@ -40,7 +40,7 @@ function Main() {
       {/* Jadikan content scrollable */}
       <div className="flex-1 overflow-y-auto overflow-x-hidden">
         <img
-          src="/src/images/zapinFestBanner.png"
+          src="/images/zapinFestBanner.png"
           alt="Zapin Festival Logo"
           className="w-full h-[350px] object-cover mb-8"
         />
@@ -115,27 +115,27 @@ function Main() {
             <div className="flex flex-col items-center gap-2 mb-4">
               <div className="flex gap-4">
                 <img
-                  src="/src/images/kementerianPelancongan.png"
+                  src="/images/kementerianPelancongan.png"
                   alt="Kementerian Pelancongan"
                   className="h-12"
                 />
                 <img
-                  src="/src/images/visitJohor.jpeg"
+                  src="/images/visitJohor.jpeg"
                   alt="Visit Johor"
                   className="h-12"
                 />
                 <img
-                  src="/src/images/majuJohor.jpeg"
+                  src="/images/majuJohor.jpeg"
                   alt="Maju Johor"
                   className="h-12"
                 />
                 <img
-                  src="/src/images/malaysiaAirlines.png"
+                  src="/images/malaysiaAirlines.png"
                   alt="Malaysia Airlines"
                   className="h-12"
                 />
                 <img
-                  src="/src/images/tourismMalaysia.png"
+                  src="/images/tourismMalaysia.png"
                   alt="Tourisme Malaysia"
                   className="h-12"
                 />
@@ -145,21 +145,21 @@ function Main() {
             <div className="flex gap-6 mb-4">
               <a href="#" aria-label="Facebook">
                 <img
-                  src="/src/images/facebook.png"
+                  src="/images/facebook.png"
                   alt="Facebook"
                   className="h-5 w-5"
                 />
               </a>
               <a href="#" aria-label="Twitter">
                 <img
-                  src="/src/images/twitter-sign.png"
+                  src="/images/twitter-sign.png"
                   alt="Twitter"
                   className="h-5 w-5"
                 />
               </a>
               <a href="#" aria-label="Instagram">
                 <img
-                  src="/src/images/instagram.png"
+                  src="/images/instagram.png"
                   alt="Instagram"
                   className="h-5 w-5"
                 />
